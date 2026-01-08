@@ -1,8 +1,10 @@
-# RecipeHub RestAPI
+# RecipeHub RestAPI 🍽
 A backend REST API for a **RecipeHub App** that provides structured, scalable, and secure access to cooking recipe data.  
 This API is designed to serve as the core backend for web or mobile applications, enabling users to browse, search, and manage cooking recipes efficiently.
 
-## Technologies
+---
+
+## 🛠️ Technologies
 * Node JS (Back-end JavaScript runtime environment)
 * Express JS (Back-end Framework)
 * MongoDB (Database)
@@ -12,6 +14,37 @@ This API is designed to serve as the core backend for web or mobile applications
 * JWT (Access Auth)
 * dotenv (Set environment variables)
 * pdfkit (PDF document generator)
+
+---
+
+## 🚀 Features
+
+### General
+- RESTful API architecture
+- Clean and scalable project structure
+- Centralized error handling
+- Request validation
+### Authentication & Authorization
+- User registration
+- User login
+- JWT-based authentication
+- Role-based access control (User & Admin)
+- Protected routes
+
+### User Features
+- View recipe list
+- View recipe details
+- Search and filter recipes
+- Pagination support
+
+### Admin Features (Admin CPanel)
+- Admin-only access
+- Create, update, and delete recipes
+- Manage recipe categories
+- Upload and manage recipe images
+- Content management via Admin Dashboard
+
+---
 
 ## Endpoints
 
