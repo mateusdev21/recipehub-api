@@ -1,7 +1,7 @@
 module.exports = (app) => {
-    const recipes = require('../../controllers/recipe.controller');
+    const recipes = require('../controllers/recipe.controller');
     const router = require('express').Router();
-    const verifyToken = require('../../middlewares/auth.middleware');
+    const verifyToken = require('../middlewares/auth.middleware');
 
     router.get('/', recipes.findAll);
     router.get('/:id', recipes.findOne);
