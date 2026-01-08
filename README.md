@@ -4,6 +4,26 @@ This API is designed to serve as the core backend for web or mobile applications
 
 ---
 
+## 🎯 Project Purpose
+The purpose of this project is to build a **secure, scalable, and maintainable REST API** that serves as the backend foundation for a **Recipe Catalog Application** with **user authentication and role-based access control.**
+
+This API is designed to support two main types of users:
+**Public Users**, who can register, log in, and browse cooking recipes
+**Administrators**, who have access to a dedicated **Admin Control Panel (CPanel)** for managing application content
+
+By separating **public access** and **admin-only operations**, this project demonstrates a real-world backend architecture where content consumption and content management are handled securely and efficiently.
+
+### Key Objectives
+
+- Provide a **centralized backend system** for recipe data that can be consumed by web or mobile applications
+- Implement **authentication and authorization** using JWT
+- Enforce **role-based access control** to protect admin resources
+- Enable administrators to manage recipes and categories through a secure API
+- Apply **RESTful principles and best practices** for clean, predictable endpoints
+- Offer a **scalable project structure** suitable for long-term development and production environments
+
+---
+
 ## 🛠️ Technologies
 * Node JS (Back-end JavaScript runtime environment)
 * Express JS (Back-end Framework)
@@ -24,6 +44,7 @@ This API is designed to serve as the core backend for web or mobile applications
 - Clean and scalable project structure
 - Centralized error handling
 - Request validation
+
 ### Authentication & Authorization
 - User registration
 - User login
@@ -68,3 +89,19 @@ This API is designed to serve as the core backend for web or mobile applications
 | /recipes/:id     |  PUT     | Update recipe by id |
 | /recipes/:id     |  DELETE  | Delete recipe by id |
 | /recipes/:id/pdf |  GET     | Generate recipe PDF |
+
+---
+
+## 📁 Project Structure
+
+```bash
+src/
+├── config/          # Database & environment configuration
+├── controllers/     # Request handlers
+├── middlewares/     # Auth, role guard, error handling
+├── models/          # Database schemas
+├── routes/          # API routes
+├── services/        # Business logic layer
+├── utils/           # Helper utilities
+├── app.js           # Express application setup
+└── server.js        # Server entry point
