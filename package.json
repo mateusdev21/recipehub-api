@@ -11,16 +11,17 @@
     "express-session": "^1.17.3",
     "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
-    "mongodb": "^4.8.1",
-    "mongoose": "^5.13.14"
+    "mongodb": "^7.0.0",
+    "mongoose": "^9.1.2",
+    "pdfkit": "^0.17.2"
   },
   "name": "perpusku-api",
   "description": "",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

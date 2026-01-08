@@ -4,7 +4,7 @@ const User = db.users;
 exports.findAll = (req, res) => {
     User.find()
         .then((result) => {
-            res.send(result);
+            res.status(200).json({ message: "User retrieved successfully", success: true, data: result });
         }).catch((err) => {
             res.status(500).send({
                 message: err.message || 'Some error while retrieve users'
@@ -17,7 +17,11 @@ exports.findOne = (req, res) => {
 
     User.findById(id)
         .then((result) => {
-            res.send(result);
+            if (!result) {
+                res.status(200).json({ message: "User not found", success: false });
+            }
+            const { password, ...userWithoutPassword } = result.toObject();
+            res.status(200).json({ message: "User found", success: true, data: userWithoutPassword });
         }).catch((err) => {
             res.status(409).send({
                 message: err.message || 'Some error while find users'

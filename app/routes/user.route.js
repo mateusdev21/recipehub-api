@@ -2,12 +2,13 @@ module.exports = (app) => {
     const users = require('../controllers/user.controller');
     const register = require('../controllers/register.controller');
     const login = require('../controllers/login.controller');
+    const verifyToken = require('../middlewares/auth.middleware');
     const router = require('express').Router();
 
-    router.get('/', users.findAll);
-    router.get('/:id', users.findOne);
+    router.route('/').get(verifyToken, users.findAll);
+    router.route('/:id').get(verifyToken, users.findOne);
     router.post('/', users.create);
-    router.put('/:id', users.update);
+    router.route('/:id').put(verifyToken, users.update);
     router.delete('/:id', users.delete);
 
     router.post('/register', register);
