@@ -67,7 +67,7 @@ By separating **public access** and **admin-only operations**, this project demo
 
 ---
 
-## Endpoints
+## 📌 API Endpoints
 
 * Users
 
@@ -119,3 +119,41 @@ src/
 |   └── register.valiation.js
 ├── .env
 └── server.js
+```
+
+---
+
+## 📦 Installation
+```bash
+git clone https://github.com/mateusdev21/recipehub-api.git
+cd recipehub-api
+npm install
+```
+
+---
+
+## ⚙️ Environment Configuration
+```bash
+DB_URL = "mongodb+srv://mateusdev21:MieU7TX5wpjWN9Tz@cluster0.nccuxc0.mongodb.net/recipehub?appName=Cluster0"
+APP_PORT = 5000
+HASH_KEY = "recipe-hub-key"
+TOKEN_SECRET = "recipe-hub-token-secret"
+NODE_ENV = "development"
+```
+
+---
+
+## ▶️ Running the Application
+
+### Development Mode
+```bash
+npm run dev
+```
+### Development Mode
+```bash
+npm start
+```
+Server will run at:
+```bash
+http://localhost:5000
+```
