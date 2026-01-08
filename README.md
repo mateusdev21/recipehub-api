@@ -1,6 +1,6 @@
-# perpusku-api
-### ( This project is still on progress 💪 )
-API for my personal project perpusku
+# RecipeHub RestAPI
+A backend REST API for a **RecipeHub App** that provides structured, scalable, and secure access to cooking recipe data.  
+This API is designed to serve as the core backend for web or mobile applications, enabling users to browse, search, and manage cooking recipes efficiently.
 
 ## Technologies
 * Node JS (Back-end JavaScript runtime environment)
@@ -11,25 +11,27 @@ API for my personal project perpusku
 * Joi (Request validation)
 * JWT (Access Auth)
 * dotenv (Set environment variables)
+* pdfkit (PDF document generator)
 
 ## Endpoints
 
-* users
+* Users
 
-|      Path      |  Method  |    Description    |
-| -------------- | -------- | ----------------- |
-| /api/users     |  GET     | Get user list     |
-| /api/users     |  POST    | Create user       |
-| /api/users/:id |  GET     | Get user by id    |
-| /api/users/:id |  PUT     | Update user by id |
-| /api/users/:id |  DELETE  | Delete user by id |
+|    Path    |  Method  |    Description    |
+| ---------- | -------- | ----------------- |
+| /users     |  GET     | Get all users     |
+| /users     |  POST    | Create user       |
+| /users/:id |  GET     | Get user by id    |
+| /users/:id |  PUT     | Update user by id |
+| /users/:id |  DELETE  | Delete user by id |
 
-* books
+* Recipes
 
-|      Path      |  Method  |    Description    |
-| -------------- | -------- | ----------------- |
-| /api/books     |  GET     | Get book list     |
-| /api/books     |  POST    | Create book       |
-| /api/books/:id |  GET     | Get book by id    |
-| /api/books/:id |  PUT     | Update book by id |
-| /api/books/:id |  DELETE  | Delete book by id |
+|       Path       |  Method  |    Description      |
+| ---------------- | -------- | ------------------- |
+| /recipes         |  GET     | Get all recipes     |
+| /recipes         |  POST    | Create recipe       |
+| /recipes/:id     |  GET     | Get recipe by id    |
+| /recipes/:id     |  PUT     | Update recipe by id |
+| /recipes/:id     |  DELETE  | Delete recipe by id |
+| /recipes/:id/pdf |  GET     | Generate recipe PDF |
