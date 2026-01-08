@@ -96,12 +96,26 @@ By separating **public access** and **admin-only operations**, this project demo
 
 ```bash
 src/
-├── config/          # Database & environment configuration
-├── controllers/     # Request handlers
-├── middlewares/     # Auth, role guard, error handling
-├── models/          # Database schemas
-├── routes/          # API routes
-├── services/        # Business logic layer
-├── utils/           # Helper utilities
-├── app.js           # Express application setup
-└── server.js        # Server entry point
+├── config/
+|   └── database.js
+├── controllers/
+|   ├── login.controller.js
+|   ├── recipe.controller.js
+|   ├── register.controller.js
+|   └── user.controller.js
+├── middlewares/
+|   └── auth.middleware.js
+├── models/
+|   ├── index.js
+|   ├── recipe.model.js
+|   └── user.model.js
+├── routes/
+|   ├── recipe.route.js
+|   └── user.route.js
+├── utils/
+|   └── pdf.js
+├── validations/
+|   ├── login.validation.js
+|   └── register.valiation.js
+├── .env
+└── server.js
