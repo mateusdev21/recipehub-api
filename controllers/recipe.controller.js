@@ -5,7 +5,12 @@ const generatePDF = require('../utils/pdf');
 exports.findAll = (req, res) => {
     Recipe.find()
         .then((result) => {
-            res.send(result);
+            res.status(200).json({
+                success: true,
+                message: 'Operation successfull',
+                data: result,
+                count: result.length
+            })
         }).catch((err) => {
             res.status(500).send({
                 message: err.message || 'Some error while retrieve recipes'
@@ -18,7 +23,11 @@ exports.findOne = (req, res) => {
 
     Recipe.findById(id)
         .then((result) => {
-            res.send(result);
+            res.status(200).json({
+                success: true,
+                message: 'Operation successfull',
+                data: result,
+            })
         }).catch((err) => {
             res.status(409).send({
                 message: err.message || 'Some error while find recipes'

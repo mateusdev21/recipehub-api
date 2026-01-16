@@ -26,5 +26,12 @@ module.exports = async (req, res) => {
         secure: environment === 'production', // Use secure cookies in production
         sameSite: 'strict', // Prevent CSRF attacks
     });
-    res.status(200).json({ message: "Login successful", data: user });
+    res.status(200).json({ success: true, message: "Login successful", data: {
+        id: user._id,
+        firstname: user.firstname,
+        lastname: user.lastname,
+        username: user.username,
+        email: user.email,
+        role: user.level
+    }});
 };

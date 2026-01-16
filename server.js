@@ -30,8 +30,10 @@ app.get('/', authMiddleware, (req, res) => {
     });
 });
 
-require('./routes/user.route.js')(app);
+require('./routes/user.route')(app);
 require('./routes/recipe.route')(app);
+require('./routes/news.route')(app);
+require('./routes/auth.route')(app);
 
 app.listen(PORT, () => {
     console.log(`Server listening on http://127.0.0.1:${PORT}`);
